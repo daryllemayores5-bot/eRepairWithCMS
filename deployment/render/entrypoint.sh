@@ -7,9 +7,10 @@ test -n "${APP_KEY:-}" || { echo 'Configure a stable Laravel APP_KEY.'; exit 1; 
 test "${DB_CONNECTION:-}" = pgsql || { echo 'PostgreSQL is required.'; exit 1; }
 test "${EREPAIR_DURABLE_FILES:-}" = true || { echo 'Enable durable file storage for this host.'; exit 1; }
 envsubst '${PORT}' < /etc/nginx/erepair.conf.template > /etc/nginx/conf.d/erepair.conf
-php artisan config:clear
-php artisan erepair:production-check --skip-database --json
-php artisan migrate --force --no-interaction
+# Bootstrap commands must run before the database cache table exists.
+CACHE_STORE=array php artisan config:clear
+CACHE_STORE=array php artisan erepair:production-check --skip-database --json
+CACHE_STORE=array php artisan migrate --force --no-interaction
 php artisan db:seed --class=CatalogSeeder --force --no-interaction
 php artisan erepair:initialize-hosted-files
 php artisan erepair:bootstrap-hosted-admin

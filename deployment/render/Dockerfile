@@ -14,8 +14,8 @@ RUN mkdir -p bootstrap/cache content resources/blueprints resources/fieldsets st
     storage/framework/cache/data storage/framework/sessions storage/framework/views storage/logs \
     && composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-scripts \
     && composer check-platform-reqs --no-dev \
-    && php artisan package:discover \
-    && php artisan vendor:publish --tag=statamic-cp --tag=statamic-frontend --tag=erepair-cp-assets --force \
+    && CACHE_STORE=array SESSION_DRIVER=array QUEUE_CONNECTION=sync php artisan package:discover \
+    && CACHE_STORE=array SESSION_DRIVER=array QUEUE_CONNECTION=sync php artisan vendor:publish --tag=statamic-cp --tag=statamic-frontend --tag=erepair-cp-assets --force \
     && chown -R www-data:www-data storage bootstrap/cache content resources/blueprints resources/fieldsets
 COPY deployment/render/nginx.conf.template /etc/nginx/erepair.conf.template
 COPY deployment/render/supervisord.conf /etc/supervisor/erepair.conf
