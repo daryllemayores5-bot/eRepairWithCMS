@@ -1,0 +1,26 @@
+server {
+    listen ${PORT};
+    server_name _;
+    root /var/www/erepair/public;
+    index index.php;
+    client_max_body_size 30m;
+    server_tokens off;
+    add_header X-Content-Type-Options nosniff always;
+    location ~ /\. { deny all; }
+    location /storage/ {
+        alias /var/www/erepair/storage/app/public/;
+        add_header X-Content-Type-Options nosniff always;
+        add_header Content-Security-Policy "default-src 'none'; sandbox" always;
+    }
+    location /vendor/ { try_files $uri =404; }
+    location / { try_files $uri /index.php?$query_string; }
+    location = /index.php {
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME /var/www/erepair/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+        fastcgi_param HTTP_PROXY "";
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_read_timeout 110s;
+    }
+    location ~ \.php$ { return 404; }
+}

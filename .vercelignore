@@ -1,0 +1,16 @@
+.local
+.git
+.agents
+.codex
+.aws
+backend
+deployment
+tests
+**/.env
+**/.env.*
+**/node_modules
+frontend/dist
+frontend-vue
+frontend-react-reference
+frontend-react-runtime
+**/*.log

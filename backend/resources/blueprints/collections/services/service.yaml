@@ -1,0 +1,53 @@
+title: Repair Service
+tabs:
+  main:
+    display: Service information
+    sections:
+      -
+        instructions: Explain a repair service to help customers choose a technician. Repair prices and availability are agreed with the selected technician.
+        fields:
+          - handle: title
+            field:
+              type: text
+              display: Service title
+              validate:
+                - required
+                - string
+                - 'max:120'
+          - handle: summary
+            field:
+              type: textarea
+              display: Short description
+              instructions: A short introduction displayed on the homepage.
+              validate:
+                - required
+                - string
+                - 'max:350'
+          - handle: content
+            field:
+              type: textarea
+              display: Service details
+              instructions: Describe common problems, what customers should expect, and any preparation needed. Plain text only.
+              validate:
+                - required
+                - string
+                - 'max:5000'
+          - handle: display_order
+            field:
+              type: integer
+              display: Display order
+              instructions: Lower numbers appear first.
+              default: 0
+              validate:
+                - required
+                - integer
+                - 'between:0,1000'
+  sidebar:
+    sections:
+      - fields:
+          - handle: slug
+            field:
+              type: slug
+              validate:
+                - 'max:200'
+                - 'new \Statamic\Rules\UniqueEntryValue({collection}, {id}, {site})'

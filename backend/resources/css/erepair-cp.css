@@ -1,0 +1,62 @@
+.erepair-ops{--ops-navy:#0B1F41;--ops-blue:#2563EB;max-width:1280px;margin:24px auto;padding:20px;color:#0F172A;font-family:Inter,system-ui,sans-serif;line-height:1.6}
+.erepair-ops h1{font-size:28px;font-weight:700;letter-spacing:-.025em;color:var(--ops-navy);margin-bottom:8px}
+.erepair-ops>p{font-size:13px;color:#64748B;max-width:760px}
+.erepair-ops>.ops-nav{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0;padding:12px;border:1px solid #E2E8F0;border-radius:14px;background:#fff}
+.erepair-ops>.ops-nav a{padding:8px 12px;border-radius:8px;font-size:13px;font-weight:600;color:#334155;text-decoration:none}
+.erepair-ops>.ops-nav a:hover,.erepair-ops>.ops-nav a:focus-visible{background:#EFF6FF;color:var(--ops-blue)}
+.erepair-ops>.ops-nav a:last-child{margin-left:auto;background:var(--ops-blue);color:#fff}
+.erepair-ops .ops-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px;margin-bottom:24px}
+.erepair-ops .ops-stats>div{border:1px solid #E2E8F0!important;padding:20px!important;border-radius:14px!important;background:#fff;box-shadow:0 2px 5px #0b1f4105}
+.erepair-ops .ops-stats strong{display:block;font-size:28px;letter-spacing:-.03em;color:var(--ops-navy);line-height:1.2}
+.erepair-ops .ops-stats p{margin-top:8px;font-size:12px;color:#64748B}
+.erepair-ops>h2{scroll-margin-top:96px;margin:32px 0 16px;font-size:18px;font-weight:700;letter-spacing:-.02em;color:var(--ops-navy);border-bottom:1px solid #E2E8F0;padding-bottom:12px}
+.erepair-ops>article,.erepair-ops>form,.erepair-ops>details,.erepair-ops>ol{border:1px solid #E2E8F0!important;border-radius:14px;background:#fff;padding:20px!important;margin:14px 0!important;box-shadow:0 2px 5px #0b1f4105;overflow-wrap:anywhere}
+.erepair-ops h3{font-size:15px;font-weight:600;color:var(--ops-navy);margin:12px 0 6px}
+.erepair-ops article p,.erepair-ops details p,.erepair-ops li{font-size:13px;line-height:1.8;color:#475569;margin:8px 0}
+.erepair-ops form{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-top:16px}
+.erepair-ops label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:#475569;min-width:140px;flex:1}
+.erepair-ops input:not([type=hidden]),.erepair-ops select{min-height:42px;border:1px solid #CBD5E1;border-radius:9px;padding:8px 12px;background:#fff;color:#0F172A;font-size:13px;max-width:100%;min-width:0}
+.erepair-ops button{min-height:42px;border-radius:9px;border:1px solid var(--ops-blue);padding:9px 16px;background:var(--ops-blue);color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:background-color .15s,box-shadow .15s}
+.erepair-ops button:hover{background:#1D4ED8;box-shadow:0 2px 6px #2563eb20}
+.erepair-ops :is(a,button,input,select,summary):focus-visible{outline:2px solid #2563EB;outline-offset:3px}
+.erepair-ops summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ops-navy);padding:6px 0}
+.erepair-ops details[open]>summary{margin-bottom:14px}
+.erepair-ops article>details{padding:12px 16px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px}
+.erepair-ops ol{padding-left:24px;list-style:decimal}
+.erepair-ops [role=alert]{border:1px solid #FECACA;background:#FEF2F2;padding:14px;border-radius:10px}
+.erepair-ops [role=status]{border:1px solid #BBF7D0;background:#F0FDF4;padding:14px;border-radius:10px;color:#166534}
+@media(max-width:640px){.erepair-ops{padding:8px;margin:16px auto}.erepair-ops>.ops-nav a:last-child{margin-left:0}.erepair-ops form>*:not([type=hidden]){width:100%}.erepair-ops .ops-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.erepair-ops .ops-stats>div{padding:14px!important}}
+@media(prefers-reduced-motion:reduce){.erepair-ops *{transition:none!important}}
+
+.erepair-ops .demo-notice{margin:16px 0;padding:16px;border:1px solid #FCD34D;border-radius:12px;background:#FFFBEB;color:#92400E;font-weight:700}
+.erepair-ops .subscription-table{overflow-x:auto;margin:20px 0;border:1px solid #E2E8F0;border-radius:12px;background:white}
+.erepair-ops table{width:100%;border-collapse:collapse;font-size:12px;text-align:left}
+.erepair-ops th,.erepair-ops td{padding:12px;border-bottom:1px solid #E2E8F0;vertical-align:top}
+.erepair-ops th{background:#F8FAFC;color:#0B1F41;font-weight:700}
+.erepair-ops caption{padding:12px;text-align:left;color:#64748B}
+.erepair-ops textarea{min-height:90px;border:1px solid #CBD5E1;border-radius:12px;padding:10px;background:#fff;color:#0F172A;max-width:100%}
+.erepair-ops .subscription-chart{margin:20px 0;padding:20px;background:white;border:1px solid #E2E8F0;border-radius:16px}
+.erepair-ops .subscription-chart svg{width:100%;height:auto}
+.erepair-ops #revenue-projection [aria-live]{width:100%;line-height:2}
+
+/* Match eRepair's shared platform surfaces while leaving native Statamic controls intact. */
+.erepair-ops{--ops-surface-shadow:0 2px 4px #0b1f4103,0 8px 24px #0b1f4103}
+.erepair-ops>.ops-nav,.erepair-ops .ops-stats>div,.erepair-ops>article,.erepair-ops>form,.erepair-ops>details,.erepair-ops>ol{border-radius:16px!important;box-shadow:var(--ops-surface-shadow)}
+.erepair-ops .ops-stats>div{border-top:3px solid #DBEAFE!important}
+.erepair-ops .ops-stats strong{font-variant-numeric:tabular-nums}
+.erepair-ops>h2{display:flex;align-items:center;gap:10px}
+.erepair-ops>h2::before{content:'';height:18px;width:3px;flex-shrink:0;border-radius:3px;background:var(--ops-blue)}
+.erepair-ops input:not([type=hidden]),.erepair-ops select,.erepair-ops button{border-radius:12px;min-height:44px}
+.erepair-ops button{box-shadow:0 2px 4px #2563eb12}
+.erepair-ops input:not([type=hidden]):hover,.erepair-ops select:hover{border-color:#94A3B8}
+
+/* Reference-inspired blue and white, scoped to eRepair operational screens. */
+.erepair-ops{--ops-blue:#0955f8;--ops-navy:#10274d;--ops-surface-shadow:0 3px 7px #194ba006,0 12px 30px #234e9410}
+.erepair-ops>.ops-nav{background:linear-gradient(115deg,#f8fbff,#edf4ff);border-color:#d6e5fb}
+.erepair-ops>.ops-nav a:hover{background:#e4efff;color:#0955f8}
+.erepair-ops .ops-stats>div{border-top-color:#91bcff!important;background:linear-gradient(145deg,#fff,#f6faff)}
+.erepair-ops .ops-stats strong{color:#13499c}
+.erepair-ops th{background:#edf4ff;color:#254b80}
+.erepair-ops input:not([type=hidden]),.erepair-ops select,.erepair-ops textarea{border-color:#d6e3f7;border-radius:9px}
+.erepair-ops button{border-radius:9px;background:#0955f8}
+@media(max-width:639px){.erepair-ops{margin:12px auto;padding:12px}.erepair-ops h1{font-size:24px}.erepair-ops>.ops-nav a{min-height:44px;display:inline-flex;align-items:center}.erepair-ops :is(input,select,textarea){font-size:16px}}

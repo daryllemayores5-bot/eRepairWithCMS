@@ -1,0 +1,1890 @@
+{
+  "source": "SimpleMaps Philippines Cities Database, https://simplemaps.com/data/ph-cities (MIT, Pareto Software LLC). Province labels adapted for highly urbanized cities; Cavinti uses the existing eRepair approximate service reference. Pola: GeoNames 1693158 via https://mapcarta.com/15731994 (GeoNames contributors, CC BY 4.0, https://creativecommons.org/licenses/by/4.0/), rounded at lookup. Not exact shop locations.",
+  "license": "MIT License. Copyright (c) Pareto Software LLC. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "locations": [
+    {
+      "city": "Manila",
+      "province": "Metro Manila",
+      "latitude": 14.5958,
+      "longitude": 120.9772
+    },
+    {
+      "city": "Quezon City",
+      "province": "Metro Manila",
+      "latitude": 14.65,
+      "longitude": 121.0475
+    },
+    {
+      "city": "Zamboanga City",
+      "province": "Zamboanga del Sur",
+      "latitude": 6.9042,
+      "longitude": 122.0761
+    },
+    {
+      "city": "Caloocan City",
+      "province": "Metro Manila",
+      "latitude": 14.65,
+      "longitude": 120.9667
+    },
+    {
+      "city": "Taguig City",
+      "province": "Metro Manila",
+      "latitude": 14.5167,
+      "longitude": 121.05
+    },
+    {
+      "city": "Canagatan",
+      "province": "Cagayan",
+      "latitude": 18,
+      "longitude": 121.8
+    },
+    {
+      "city": "Davao",
+      "province": "Davao del Sur",
+      "latitude": 7.0662,
+      "longitude": 125.6094
+    },
+    {
+      "city": "Cebu City",
+      "province": "Cebu",
+      "latitude": 10.293,
+      "longitude": 123.902
+    },
+    {
+      "city": "Antipolo",
+      "province": "Rizal",
+      "latitude": 14.5886,
+      "longitude": 121.1757
+    },
+    {
+      "city": "Pasig City",
+      "province": "Metro Manila",
+      "latitude": 14.5605,
+      "longitude": 121.0765
+    },
+    {
+      "city": "Dasmariñas",
+      "province": "Cavite",
+      "latitude": 14.3294,
+      "longitude": 120.9367
+    },
+    {
+      "city": "Cagayan de Oro",
+      "province": "Misamis Oriental",
+      "latitude": 8.4833,
+      "longitude": 124.65
+    },
+    {
+      "city": "General Santos",
+      "province": "South Cotabato",
+      "latitude": 6.1167,
+      "longitude": 125.1667
+    },
+    {
+      "city": "Valenzuela",
+      "province": "Metro Manila",
+      "latitude": 14.6936,
+      "longitude": 120.9656
+    },
+    {
+      "city": "City of Parañaque",
+      "province": "Metro Manila",
+      "latitude": 14.4978,
+      "longitude": 120.9907
+    },
+    {
+      "city": "Bacoor",
+      "province": "Cavite",
+      "latitude": 14.4624,
+      "longitude": 120.9645
+    },
+    {
+      "city": "San Jose del Monte",
+      "province": "Bulacan",
+      "latitude": 14.8131,
+      "longitude": 121.0464
+    },
+    {
+      "city": "Tondo",
+      "province": "Manila",
+      "latitude": 14.617,
+      "longitude": 120.967
+    },
+    {
+      "city": "Las Piñas City",
+      "province": "Metro Manila",
+      "latitude": 14.45,
+      "longitude": 120.9833
+    },
+    {
+      "city": "Bacolod",
+      "province": "Negros Occidental",
+      "latitude": 10.6677,
+      "longitude": 122.9533
+    },
+    {
+      "city": "Biñan",
+      "province": "Laguna",
+      "latitude": 14.3333,
+      "longitude": 121.0833
+    },
+    {
+      "city": "City of Calamba",
+      "province": "Laguna",
+      "latitude": 14.2167,
+      "longitude": 121.1667
+    },
+    {
+      "city": "Iloilo",
+      "province": "Iloilo",
+      "latitude": 10.7,
+      "longitude": 122.5667
+    },
+    {
+      "city": "Muntinlupa City",
+      "province": "Metro Manila",
+      "latitude": 14.3833,
+      "longitude": 121.05
+    },
+    {
+      "city": "Lapu-Lapu City",
+      "province": "Cebu",
+      "latitude": 10.3127,
+      "longitude": 123.9488
+    },
+    {
+      "city": "Imus",
+      "province": "Cavite",
+      "latitude": 14.4297,
+      "longitude": 120.9367
+    },
+    {
+      "city": "General Trias",
+      "province": "Cavite",
+      "latitude": 14.3833,
+      "longitude": 120.8833
+    },
+    {
+      "city": "Marikina City",
+      "province": "Metro Manila",
+      "latitude": 14.65,
+      "longitude": 121.1
+    },
+    {
+      "city": "Mandaluyong City",
+      "province": "Metro Manila",
+      "latitude": 14.5833,
+      "longitude": 121.0333
+    },
+    {
+      "city": "Pasay City",
+      "province": "Metro Manila",
+      "latitude": 14.5439,
+      "longitude": 120.995
+    },
+    {
+      "city": "Santa Rosa",
+      "province": "Laguna",
+      "latitude": 14.3167,
+      "longitude": 121.1167
+    },
+    {
+      "city": "Tarlac City",
+      "province": "Tarlac",
+      "latitude": 15.4869,
+      "longitude": 120.59
+    },
+    {
+      "city": "Malabon",
+      "province": "Metro Manila",
+      "latitude": 14.6625,
+      "longitude": 120.9567
+    },
+    {
+      "city": "Lipa City",
+      "province": "Batangas",
+      "latitude": 13.9411,
+      "longitude": 121.1622
+    },
+    {
+      "city": "Cotabato",
+      "province": "Cotabato",
+      "latitude": 7.2167,
+      "longitude": 124.25
+    },
+    {
+      "city": "Iligan",
+      "province": "Lanao del Norte",
+      "latitude": 8.2333,
+      "longitude": 124.25
+    },
+    {
+      "city": "Baguio City",
+      "province": "Benguet",
+      "latitude": 16.4172,
+      "longitude": 120.591
+    },
+    {
+      "city": "Cabuyao",
+      "province": "Laguna",
+      "latitude": 14.275,
+      "longitude": 121.125
+    },
+    {
+      "city": "Mandaue City",
+      "province": "Mandaue",
+      "latitude": 10.3333,
+      "longitude": 123.9333
+    },
+    {
+      "city": "Batangas",
+      "province": "Batangas",
+      "latitude": 13.75,
+      "longitude": 121.05
+    },
+    {
+      "city": "West Rembo",
+      "province": "Makati",
+      "latitude": 14.5602,
+      "longitude": 121.0615
+    },
+    {
+      "city": "Cabanatuan City",
+      "province": "Nueva Ecija",
+      "latitude": 15.4908,
+      "longitude": 120.9678
+    },
+    {
+      "city": "Naga City",
+      "province": "Naga",
+      "latitude": 13.6232,
+      "longitude": 123.1841
+    },
+    {
+      "city": "Sampaloc",
+      "province": "Manila",
+      "latitude": 14.6031,
+      "longitude": 121.0022
+    },
+    {
+      "city": "Tanza",
+      "province": "Cavite",
+      "latitude": 14.3944,
+      "longitude": 120.8531
+    },
+    {
+      "city": "San Pedro",
+      "province": "Laguna",
+      "latitude": 14.3595,
+      "longitude": 121.0473
+    },
+    {
+      "city": "Puerto Princesa",
+      "province": "Palawan",
+      "latitude": 9.74,
+      "longitude": 118.744
+    },
+    {
+      "city": "Silang",
+      "province": "Cavite",
+      "latitude": 14.2306,
+      "longitude": 120.975
+    },
+    {
+      "city": "San Pablo",
+      "province": "Laguna",
+      "latitude": 14.07,
+      "longitude": 121.325
+    },
+    {
+      "city": "Tagum",
+      "province": "Davao del Norte",
+      "latitude": 7.4478,
+      "longitude": 125.8078
+    },
+    {
+      "city": "Lucena",
+      "province": "Quezon",
+      "latitude": 13.9348,
+      "longitude": 121.6127
+    },
+    {
+      "city": "San Mateo",
+      "province": "Rizal",
+      "latitude": 14.6982,
+      "longitude": 121.1236
+    },
+    {
+      "city": "Olongapo",
+      "province": "Zambales",
+      "latitude": 14.8333,
+      "longitude": 120.2833
+    },
+    {
+      "city": "Talisay",
+      "province": "Cebu",
+      "latitude": 10.25,
+      "longitude": 123.8333
+    },
+    {
+      "city": "Marilao",
+      "province": "Bulacan",
+      "latitude": 14.7581,
+      "longitude": 120.9481
+    },
+    {
+      "city": "Marawi City",
+      "province": "Lanao del Sur",
+      "latitude": 8.0031,
+      "longitude": 124.285
+    },
+    {
+      "city": "Tacloban",
+      "province": "Leyte",
+      "latitude": 11.2444,
+      "longitude": 125.0039
+    },
+    {
+      "city": "Navotas",
+      "province": "Metro Manila",
+      "latitude": 14.6667,
+      "longitude": 120.9417
+    },
+    {
+      "city": "Ormoc",
+      "province": "Leyte",
+      "latitude": 11.0106,
+      "longitude": 124.6075
+    },
+    {
+      "city": "Naic",
+      "province": "Cavite",
+      "latitude": 14.3167,
+      "longitude": 120.7667
+    },
+    {
+      "city": "Meycauayan",
+      "province": "Bulacan",
+      "latitude": 14.7333,
+      "longitude": 120.9667
+    },
+    {
+      "city": "Trece Martires City",
+      "province": "Cavite",
+      "latitude": 14.2833,
+      "longitude": 120.8667
+    },
+    {
+      "city": "Valencia",
+      "province": "Bukidnon",
+      "latitude": 7.9042,
+      "longitude": 125.0928
+    },
+    {
+      "city": "Santo Tomas",
+      "province": "Batangas",
+      "latitude": 14.1079,
+      "longitude": 121.1414
+    },
+    {
+      "city": "Panabo",
+      "province": "Davao del Norte",
+      "latitude": 7.3014,
+      "longitude": 125.681
+    },
+    {
+      "city": "Kabankalan",
+      "province": "Negros Occidental",
+      "latitude": 9.9833,
+      "longitude": 122.8167
+    },
+    {
+      "city": "Legazpi City",
+      "province": "Albay",
+      "latitude": 13.1333,
+      "longitude": 123.7333
+    },
+    {
+      "city": "Tanauan",
+      "province": "Batangas",
+      "latitude": 14.0833,
+      "longitude": 121.15
+    },
+    {
+      "city": "San Carlos City",
+      "province": "Pangasinan",
+      "latitude": 15.9281,
+      "longitude": 120.3489
+    },
+    {
+      "city": "Toledo",
+      "province": "Cebu",
+      "latitude": 10.3833,
+      "longitude": 123.65
+    },
+    {
+      "city": "Pagadian",
+      "province": "Zamboanga del Sur",
+      "latitude": 7.8272,
+      "longitude": 123.4364
+    },
+    {
+      "city": "Bago",
+      "province": "Negros Occidental",
+      "latitude": 10.5388,
+      "longitude": 122.8384
+    },
+    {
+      "city": "Digos",
+      "province": "Davao del Sur",
+      "latitude": 6.7454,
+      "longitude": 125.3559
+    },
+    {
+      "city": "Lubao",
+      "province": "Pampanga",
+      "latitude": 14.9333,
+      "longitude": 120.6
+    },
+    {
+      "city": "Calbayog City",
+      "province": "Samar",
+      "latitude": 12.0669,
+      "longitude": 124.5947
+    },
+    {
+      "city": "Sorsogon",
+      "province": "Sorsogon",
+      "latitude": 12.9742,
+      "longitude": 124.0058
+    },
+    {
+      "city": "Roxas City",
+      "province": "Capiz",
+      "latitude": 11.5894,
+      "longitude": 122.7511
+    },
+    {
+      "city": "Concepcion",
+      "province": "Tarlac",
+      "latitude": 15.3249,
+      "longitude": 120.6554
+    },
+    {
+      "city": "Surigao",
+      "province": "Surigao del Norte",
+      "latitude": 9.7897,
+      "longitude": 125.4958
+    },
+    {
+      "city": "General Mariano Alvarez",
+      "province": "Cavite",
+      "latitude": 14.3,
+      "longitude": 121
+    },
+    {
+      "city": "Santa Ana",
+      "province": "Manila",
+      "latitude": 14.58,
+      "longitude": 121.012
+    },
+    {
+      "city": "Dagupan City",
+      "province": "Dagupan",
+      "latitude": 16.0435,
+      "longitude": 120.3397
+    },
+    {
+      "city": "Baliuag",
+      "province": "Bulacan",
+      "latitude": 14.954,
+      "longitude": 120.901
+    },
+    {
+      "city": "Tuguegarao",
+      "province": "Cagayan",
+      "latitude": 17.6133,
+      "longitude": 121.7303
+    },
+    {
+      "city": "Pandi",
+      "province": "Bulacan",
+      "latitude": 14.8667,
+      "longitude": 120.95
+    },
+    {
+      "city": "Sariaya",
+      "province": "Quezon",
+      "latitude": 13.9624,
+      "longitude": 121.5265
+    },
+    {
+      "city": "Cadiz",
+      "province": "Negros Occidental",
+      "latitude": 10.95,
+      "longitude": 123.3
+    },
+    {
+      "city": "Danao",
+      "province": "Cebu",
+      "latitude": 10.5333,
+      "longitude": 123.9333
+    },
+    {
+      "city": "Kidapawan",
+      "province": "Cotabato",
+      "latitude": 7.0083,
+      "longitude": 125.0894
+    },
+    {
+      "city": "Poblacion",
+      "province": "Cebu",
+      "latitude": 10.4167,
+      "longitude": 123.9667
+    },
+    {
+      "city": "San Jose",
+      "province": "Nueva Ecija",
+      "latitude": 15.7919,
+      "longitude": 120.99
+    },
+    {
+      "city": "Mariveles",
+      "province": "Bataan",
+      "latitude": 14.4333,
+      "longitude": 120.4833
+    },
+    {
+      "city": "Minglanilla",
+      "province": "Cebu",
+      "latitude": 10.245,
+      "longitude": 123.7964
+    },
+    {
+      "city": "Consolacion",
+      "province": "Cebu",
+      "latitude": 10.4,
+      "longitude": 123.95
+    },
+    {
+      "city": "Jolo",
+      "province": "Sulu",
+      "latitude": 6.05,
+      "longitude": 121
+    },
+    {
+      "city": "Santiago",
+      "province": "Isabela",
+      "latitude": 16.6833,
+      "longitude": 121.55
+    },
+    {
+      "city": "Calapan",
+      "province": "Bulacan",
+      "latitude": 13.414,
+      "longitude": 121.18
+    },
+    {
+      "city": "Urdaneta",
+      "province": "Pangasinan",
+      "latitude": 15.9761,
+      "longitude": 120.5711
+    },
+    {
+      "city": "Calapan",
+      "province": "Oriental Mindoro",
+      "latitude": 13.4108,
+      "longitude": 121.1797
+    },
+    {
+      "city": "Ozamiz City",
+      "province": "Misamis Occidental",
+      "latitude": 8.15,
+      "longitude": 123.85
+    },
+    {
+      "city": "La Trinidad",
+      "province": "Benguet",
+      "latitude": 16.4621,
+      "longitude": 120.5877
+    },
+    {
+      "city": "Nasugbu",
+      "province": "Batangas",
+      "latitude": 14.0667,
+      "longitude": 120.6333
+    },
+    {
+      "city": "Tabaco",
+      "province": "Albay",
+      "latitude": 13.35,
+      "longitude": 123.7333
+    },
+    {
+      "city": "Carcar",
+      "province": "Cebu",
+      "latitude": 10.1167,
+      "longitude": 123.6333
+    },
+    {
+      "city": "Payatas",
+      "province": "Quezon",
+      "latitude": 14.7153,
+      "longitude": 121.1058
+    },
+    {
+      "city": "Tanay",
+      "province": "Rizal",
+      "latitude": 14.4968,
+      "longitude": 121.2846
+    },
+    {
+      "city": "Gingoog",
+      "province": "Misamis Oriental",
+      "latitude": 8.8167,
+      "longitude": 125.1
+    },
+    {
+      "city": "Naga",
+      "province": "Cebu",
+      "latitude": 10.2167,
+      "longitude": 123.75
+    },
+    {
+      "city": "Daraga",
+      "province": "Albay",
+      "latitude": 13.148,
+      "longitude": 123.7121
+    },
+    {
+      "city": "Candelaria",
+      "province": "Quezon",
+      "latitude": 13.9311,
+      "longitude": 121.4233
+    },
+    {
+      "city": "San Juan",
+      "province": "Metro Manila",
+      "latitude": 14.604,
+      "longitude": 121.03
+    },
+    {
+      "city": "Dumaguete City",
+      "province": "Negros Oriental",
+      "latitude": 9.307,
+      "longitude": 123.3074
+    },
+    {
+      "city": "San Andres",
+      "province": "Rizal",
+      "latitude": 14.5739,
+      "longitude": 121.0039
+    },
+    {
+      "city": "San Carlos",
+      "province": "Negros Occidental",
+      "latitude": 10.4929,
+      "longitude": 123.4095
+    },
+    {
+      "city": "Bongao",
+      "province": "Tawi-Tawi",
+      "latitude": 5.0292,
+      "longitude": 119.7731
+    },
+    {
+      "city": "Guimba",
+      "province": "Nueva Ecija",
+      "latitude": 15.6606,
+      "longitude": 120.765
+    },
+    {
+      "city": "Rosario",
+      "province": "Batangas",
+      "latitude": 13.846,
+      "longitude": 121.206
+    },
+    {
+      "city": "Santa Cruz",
+      "province": "Laguna",
+      "latitude": 14.2833,
+      "longitude": 121.4167
+    },
+    {
+      "city": "Bayawan",
+      "province": "Negros Oriental",
+      "latitude": 9.3667,
+      "longitude": 122.8
+    },
+    {
+      "city": "Kawit",
+      "province": "Cavite",
+      "latitude": 14.4333,
+      "longitude": 120.9
+    },
+    {
+      "city": "Poblacion",
+      "province": "Muntinlupa",
+      "latitude": 14.389,
+      "longitude": 121.045
+    },
+    {
+      "city": "Guiguinto",
+      "province": "Bulacan",
+      "latitude": 14.8333,
+      "longitude": 120.8833
+    },
+    {
+      "city": "Los Baños",
+      "province": "Laguna",
+      "latitude": 14.1667,
+      "longitude": 121.2167
+    },
+    {
+      "city": "Santa Cruz",
+      "province": "Manila",
+      "latitude": 14.6181,
+      "longitude": 120.985
+    },
+    {
+      "city": "Midsayap",
+      "province": "Cotabato",
+      "latitude": 7.1917,
+      "longitude": 124.5333
+    },
+    {
+      "city": "Tayabas",
+      "province": "Quezon",
+      "latitude": 14.0167,
+      "longitude": 121.5833
+    },
+    {
+      "city": "Malate",
+      "province": "Manila",
+      "latitude": 14.5698,
+      "longitude": 120.9916
+    },
+    {
+      "city": "Baybay",
+      "province": "Leyte",
+      "latitude": 10.6833,
+      "longitude": 124.8
+    },
+    {
+      "city": "San Juan",
+      "province": "Batangas",
+      "latitude": 13.8285,
+      "longitude": 121.3931
+    },
+    {
+      "city": "Mangaldan",
+      "province": "Pangasinan",
+      "latitude": 16.07,
+      "longitude": 120.4025
+    },
+    {
+      "city": "Libmanan",
+      "province": "Camarines Sur",
+      "latitude": 13.6928,
+      "longitude": 123.0596
+    },
+    {
+      "city": "Santamesa",
+      "province": "Manila",
+      "latitude": 14.6,
+      "longitude": 121.0167
+    },
+    {
+      "city": "Carmona",
+      "province": "Cavite",
+      "latitude": 14.3167,
+      "longitude": 121.05
+    },
+    {
+      "city": "Laoag",
+      "province": "Ilocos Norte",
+      "latitude": 18.1978,
+      "longitude": 120.5936
+    },
+    {
+      "city": "Rosario",
+      "province": "Cavite",
+      "latitude": 14.4177,
+      "longitude": 120.8523
+    },
+    {
+      "city": "Balanga",
+      "province": "Bataan",
+      "latitude": 14.6833,
+      "longitude": 120.5333
+    },
+    {
+      "city": "Talisay",
+      "province": "Negros Occidental",
+      "latitude": 10.7333,
+      "longitude": 122.9667
+    },
+    {
+      "city": "Catbalogan",
+      "province": "Samar",
+      "latitude": 11.7833,
+      "longitude": 124.8833
+    },
+    {
+      "city": "Tiaong",
+      "province": "Quezon",
+      "latitude": 13.95,
+      "longitude": 121.3167
+    },
+    {
+      "city": "Bulan",
+      "province": "Sorsogon",
+      "latitude": 12.6697,
+      "longitude": 123.8758
+    },
+    {
+      "city": "Bagong Silangan",
+      "province": "Quezon",
+      "latitude": 14.6962,
+      "longitude": 121.1093
+    },
+    {
+      "city": "Daet",
+      "province": "Camarines Norte",
+      "latitude": 14.1142,
+      "longitude": 122.9564
+    },
+    {
+      "city": "Tagbilaran City",
+      "province": "Bohol",
+      "latitude": 9.65,
+      "longitude": 123.85
+    },
+    {
+      "city": "Santa Cruz",
+      "province": "Davao del Sur",
+      "latitude": 6.8333,
+      "longitude": 125.4167
+    },
+    {
+      "city": "Sindangan",
+      "province": "Zamboanga del Norte",
+      "latitude": 8.2386,
+      "longitude": 122.9986
+    },
+    {
+      "city": "Masbate",
+      "province": "Masbate",
+      "latitude": 12.3739,
+      "longitude": 123.6247
+    },
+    {
+      "city": "Pili",
+      "province": "Camarines Sur",
+      "latitude": 13.5562,
+      "longitude": 123.2741
+    },
+    {
+      "city": "Isulan",
+      "province": "Sultan Kudarat",
+      "latitude": 6.6333,
+      "longitude": 124.6
+    },
+    {
+      "city": "Oton",
+      "province": "Iloilo",
+      "latitude": 10.6931,
+      "longitude": 122.4736
+    },
+    {
+      "city": "Cavite City",
+      "province": "Cavite",
+      "latitude": 14.4833,
+      "longitude": 120.9
+    },
+    {
+      "city": "Catarman",
+      "province": "Northern Samar",
+      "latitude": 12.4994,
+      "longitude": 124.6328
+    },
+    {
+      "city": "Escalante",
+      "province": "Negros Occidental",
+      "latitude": 10.8333,
+      "longitude": 123.5
+    },
+    {
+      "city": "Balayan",
+      "province": "Batangas",
+      "latitude": 13.9333,
+      "longitude": 120.7333
+    },
+    {
+      "city": "Lopez",
+      "province": "Quezon",
+      "latitude": 13.884,
+      "longitude": 122.2604
+    },
+    {
+      "city": "Balamban",
+      "province": "Cebu",
+      "latitude": 10.5039,
+      "longitude": 123.7156
+    },
+    {
+      "city": "Daanbantayan",
+      "province": "Cebu",
+      "latitude": 11.25,
+      "longitude": 124
+    },
+    {
+      "city": "Lemery",
+      "province": "Batangas",
+      "latitude": 13.881,
+      "longitude": 120.9127
+    },
+    {
+      "city": "Salaman",
+      "province": "Sultan Kudarat",
+      "latitude": 6.6333,
+      "longitude": 124.0667
+    },
+    {
+      "city": "Kalibo",
+      "province": "Aklan",
+      "latitude": 11.7072,
+      "longitude": 122.37
+    },
+    {
+      "city": "Calaca",
+      "province": "Batangas",
+      "latitude": 13.93,
+      "longitude": 120.8131
+    },
+    {
+      "city": "Passi",
+      "province": "Iloilo",
+      "latitude": 11.1,
+      "longitude": 122.6333
+    },
+    {
+      "city": "Victorias",
+      "province": "Negros Occidental",
+      "latitude": 10.9,
+      "longitude": 123.0833
+    },
+    {
+      "city": "Bogo",
+      "province": "Cebu",
+      "latitude": 11.0167,
+      "longitude": 124
+    },
+    {
+      "city": "Calauan",
+      "province": "Laguna",
+      "latitude": 14.15,
+      "longitude": 121.3167
+    },
+    {
+      "city": "Compostela",
+      "province": "Davao de Oro",
+      "latitude": 7.6667,
+      "longitude": 126.0833
+    },
+    {
+      "city": "Aroroy",
+      "province": "Masbate",
+      "latitude": 12.5125,
+      "longitude": 123.3989
+    },
+    {
+      "city": "Dapitan",
+      "province": "Zamboanga del Norte",
+      "latitude": 8.6549,
+      "longitude": 123.4243
+    },
+    {
+      "city": "Maco",
+      "province": "Davao de Oro",
+      "latitude": 7.3697,
+      "longitude": 125.8558
+    },
+    {
+      "city": "Nabunturan",
+      "province": "Davao de Oro",
+      "latitude": 7.6034,
+      "longitude": 125.967
+    },
+    {
+      "city": "Bolinao",
+      "province": "Pangasinan",
+      "latitude": 16.3881,
+      "longitude": 119.8947
+    },
+    {
+      "city": "Tanjay",
+      "province": "Negros Oriental",
+      "latitude": 9.5167,
+      "longitude": 123.1583
+    },
+    {
+      "city": "Guinobatan",
+      "province": "Albay",
+      "latitude": 13.1833,
+      "longitude": 123.6
+    },
+    {
+      "city": "Siaton",
+      "province": "Negros Oriental",
+      "latitude": 9.0667,
+      "longitude": 123.0333
+    },
+    {
+      "city": "Calatrava",
+      "province": "Negros Occidental",
+      "latitude": 10.6,
+      "longitude": 123.4833
+    },
+    {
+      "city": "Pagbilao",
+      "province": "Quezon",
+      "latitude": 13.972,
+      "longitude": 121.687
+    },
+    {
+      "city": "Limay",
+      "province": "Bataan",
+      "latitude": 14.5619,
+      "longitude": 120.5983
+    },
+    {
+      "city": "San Jose",
+      "province": "Batangas",
+      "latitude": 13.8772,
+      "longitude": 121.105
+    },
+    {
+      "city": "Bamban",
+      "province": "Tarlac",
+      "latitude": 15.2742,
+      "longitude": 120.5669
+    },
+    {
+      "city": "Bustos",
+      "province": "Bulacan",
+      "latitude": 14.95,
+      "longitude": 120.9167
+    },
+    {
+      "city": "Tagoloan",
+      "province": "Misamis Oriental",
+      "latitude": 8.5333,
+      "longitude": 124.75
+    },
+    {
+      "city": "Palo",
+      "province": "Leyte",
+      "latitude": 11.1583,
+      "longitude": 124.9917
+    },
+    {
+      "city": "Balagtas",
+      "province": "Bulacan",
+      "latitude": 14.8145,
+      "longitude": 120.9085
+    },
+    {
+      "city": "Argao",
+      "province": "Cebu",
+      "latitude": 9.8833,
+      "longitude": 123.6
+    },
+    {
+      "city": "Buhi",
+      "province": "Camarines Sur",
+      "latitude": 13.4347,
+      "longitude": 123.5167
+    },
+    {
+      "city": "Bauang",
+      "province": "La Union",
+      "latitude": 16.5333,
+      "longitude": 120.3333
+    },
+    {
+      "city": "Balingasag",
+      "province": "Misamis Oriental",
+      "latitude": 8.75,
+      "longitude": 124.7833
+    },
+    {
+      "city": "Pinamungahan",
+      "province": "Cebu",
+      "latitude": 10.2667,
+      "longitude": 123.5833
+    },
+    {
+      "city": "San Fernando",
+      "province": "Cebu",
+      "latitude": 10.1667,
+      "longitude": 123.7
+    },
+    {
+      "city": "Virac",
+      "province": "Catanduanes",
+      "latitude": 13.5833,
+      "longitude": 124.2333
+    },
+    {
+      "city": "Pavia",
+      "province": "Iloilo",
+      "latitude": 10.775,
+      "longitude": 122.5417
+    },
+    {
+      "city": "Esperanza",
+      "province": "Sultan Kudarat",
+      "latitude": 6.7222,
+      "longitude": 124.5201
+    },
+    {
+      "city": "Orani",
+      "province": "Bataan",
+      "latitude": 14.8,
+      "longitude": 120.5333
+    },
+    {
+      "city": "Poblacion",
+      "province": "Cebu",
+      "latitude": 10.252,
+      "longitude": 123.949
+    },
+    {
+      "city": "Bayombong",
+      "province": "Nueva Vizcaya",
+      "latitude": 16.4833,
+      "longitude": 121.15
+    },
+    {
+      "city": "Catanauan",
+      "province": "Quezon",
+      "latitude": 13.5926,
+      "longitude": 122.3215
+    },
+    {
+      "city": "Gumaca",
+      "province": "Quezon",
+      "latitude": 13.921,
+      "longitude": 122.1002
+    },
+    {
+      "city": "Calauag",
+      "province": "Quezon",
+      "latitude": 13.9575,
+      "longitude": 122.288
+    },
+    {
+      "city": "Rizal",
+      "province": "Nueva Ecija",
+      "latitude": 15.71,
+      "longitude": 121.1047
+    },
+    {
+      "city": "Goa",
+      "province": "Camarines Sur",
+      "latitude": 13.6983,
+      "longitude": 123.4889
+    },
+    {
+      "city": "Oroquieta",
+      "province": "Misamis Occidental",
+      "latitude": 8.4833,
+      "longitude": 123.8
+    },
+    {
+      "city": "Cuyapo",
+      "province": "Nueva Ecija",
+      "latitude": 15.7778,
+      "longitude": 120.6608
+    },
+    {
+      "city": "Buenavista",
+      "province": "Agusan del Norte",
+      "latitude": 8.9744,
+      "longitude": 125.409
+    },
+    {
+      "city": "Mauban",
+      "province": "Quezon",
+      "latitude": 14.1911,
+      "longitude": 121.7308
+    },
+    {
+      "city": "Castillejos",
+      "province": "Zambales",
+      "latitude": 14.9333,
+      "longitude": 120.2
+    },
+    {
+      "city": "Indang",
+      "province": "Cavite",
+      "latitude": 14.2,
+      "longitude": 120.8833
+    },
+    {
+      "city": "Bay",
+      "province": "Laguna",
+      "latitude": 14.1833,
+      "longitude": 121.2833
+    },
+    {
+      "city": "San Jose",
+      "province": "Antique",
+      "latitude": 10.7433,
+      "longitude": 121.9411
+    },
+    {
+      "city": "Sibulan",
+      "province": "Negros Oriental",
+      "latitude": 9.35,
+      "longitude": 123.2833
+    },
+    {
+      "city": "Kiamba",
+      "province": "Sarangani",
+      "latitude": 5.9912,
+      "longitude": 124.6257
+    },
+    {
+      "city": "Santa Barbara",
+      "province": "Iloilo",
+      "latitude": 10.8231,
+      "longitude": 122.5344
+    },
+    {
+      "city": "Tangub",
+      "province": "Misamis Occidental",
+      "latitude": 8.0667,
+      "longitude": 123.75
+    },
+    {
+      "city": "Tuburan",
+      "province": "Cebu",
+      "latitude": 10.7333,
+      "longitude": 123.8333
+    },
+    {
+      "city": "Miagao",
+      "province": "Iloilo",
+      "latitude": 10.6442,
+      "longitude": 122.2352
+    },
+    {
+      "city": "Pateros",
+      "province": "",
+      "latitude": 14.5448,
+      "longitude": 121.0671
+    },
+    {
+      "city": "Opol",
+      "province": "Misamis Oriental",
+      "latitude": 8.5167,
+      "longitude": 124.5667
+    },
+    {
+      "city": "Hilongos",
+      "province": "Leyte",
+      "latitude": 10.3667,
+      "longitude": 124.75
+    },
+    {
+      "city": "Nagcarlan",
+      "province": "Laguna",
+      "latitude": 14.1364,
+      "longitude": 121.4165
+    },
+    {
+      "city": "Saravia",
+      "province": "Negros Occidental",
+      "latitude": 10.8833,
+      "longitude": 122.9667
+    },
+    {
+      "city": "Tigbauan",
+      "province": "Iloilo",
+      "latitude": 10.6747,
+      "longitude": 122.3776
+    },
+    {
+      "city": "Isabela",
+      "province": "Negros Occidental",
+      "latitude": 10.2,
+      "longitude": 122.9833
+    },
+    {
+      "city": "Sipocot",
+      "province": "Camarines Sur",
+      "latitude": 13.7675,
+      "longitude": 122.9783
+    },
+    {
+      "city": "Villasis",
+      "province": "Pangasinan",
+      "latitude": 15.9,
+      "longitude": 120.5833
+    },
+    {
+      "city": "Aurora",
+      "province": "Quezon",
+      "latitude": 13.35,
+      "longitude": 122.5167
+    },
+    {
+      "city": "Tandag",
+      "province": "Surigao del Sur",
+      "latitude": 9.0789,
+      "longitude": 126.1986
+    },
+    {
+      "city": "Orion",
+      "province": "Bataan",
+      "latitude": 14.6206,
+      "longitude": 120.5817
+    },
+    {
+      "city": "Abuyog",
+      "province": "Leyte",
+      "latitude": 10.747,
+      "longitude": 125.012
+    },
+    {
+      "city": "Tigaon",
+      "province": "Camarines Sur",
+      "latitude": 13.6319,
+      "longitude": 123.4975
+    },
+    {
+      "city": "Taal",
+      "province": "Batangas",
+      "latitude": 13.8833,
+      "longitude": 120.9333
+    },
+    {
+      "city": "Gubat",
+      "province": "Sorsogon",
+      "latitude": 12.9189,
+      "longitude": 124.1231
+    },
+    {
+      "city": "Obando",
+      "province": "Bulacan",
+      "latitude": 14.7083,
+      "longitude": 120.9375
+    },
+    {
+      "city": "Jose Pañganiban",
+      "province": "Camarines Norte",
+      "latitude": 14.2922,
+      "longitude": 122.6928
+    },
+    {
+      "city": "Tanauan",
+      "province": "Leyte",
+      "latitude": 11.1167,
+      "longitude": 125.0167
+    },
+    {
+      "city": "Paracale",
+      "province": "Camarines Norte",
+      "latitude": 14.2804,
+      "longitude": 122.7881
+    },
+    {
+      "city": "Irosin",
+      "province": "Iloilo",
+      "latitude": 12.705,
+      "longitude": 124.0319
+    },
+    {
+      "city": "Roxas",
+      "province": "Oriental Mindoro",
+      "latitude": 12.5833,
+      "longitude": 121.5
+    },
+    {
+      "city": "Malabang",
+      "province": "Lanao del Sur",
+      "latitude": 7.5903,
+      "longitude": 124.0703
+    },
+    {
+      "city": "Poblacion",
+      "province": "Cebu",
+      "latitude": 10.4667,
+      "longitude": 123.9667
+    },
+    {
+      "city": "Jasaan",
+      "province": "Misamis Oriental",
+      "latitude": 8.65,
+      "longitude": 124.75
+    },
+    {
+      "city": "Boac",
+      "province": "Marinduque",
+      "latitude": 13.4463,
+      "longitude": 121.84
+    },
+    {
+      "city": "Masantol",
+      "province": "Pampanga",
+      "latitude": 14.9,
+      "longitude": 120.7167
+    },
+    {
+      "city": "Lagonoy",
+      "province": "Camarines Sur",
+      "latitude": 13.7353,
+      "longitude": 123.5208
+    },
+    {
+      "city": "Batac",
+      "province": "Ilocos Norte",
+      "latitude": 18.0554,
+      "longitude": 120.5649
+    },
+    {
+      "city": "Mulanay",
+      "province": "Quezon",
+      "latitude": 13.5222,
+      "longitude": 122.4042
+    },
+    {
+      "city": "Estancia",
+      "province": "Iloilo",
+      "latitude": 11.45,
+      "longitude": 123.15
+    },
+    {
+      "city": "Tagkawayan",
+      "province": "Quezon",
+      "latitude": 13.9664,
+      "longitude": 122.5383
+    },
+    {
+      "city": "Vigan",
+      "province": "Ilocos Sur",
+      "latitude": 17.5715,
+      "longitude": 120.386
+    },
+    {
+      "city": "Mercedes",
+      "province": "Camarines Norte",
+      "latitude": 14.1093,
+      "longitude": 123.0109
+    },
+    {
+      "city": "Alaminos",
+      "province": "Laguna",
+      "latitude": 14.0635,
+      "longitude": 121.2451
+    },
+    {
+      "city": "Pasacao",
+      "province": "Camarines Sur",
+      "latitude": 13.5118,
+      "longitude": 123.0426
+    },
+    {
+      "city": "Naguilian",
+      "province": "La Union",
+      "latitude": 16.5333,
+      "longitude": 120.4
+    },
+    {
+      "city": "Guiuan",
+      "province": "Eastern Samar",
+      "latitude": 11.0333,
+      "longitude": 125.7333
+    },
+    {
+      "city": "Molave",
+      "province": "Zamboanga del Sur",
+      "latitude": 8.0933,
+      "longitude": 123.485
+    },
+    {
+      "city": "Bato",
+      "province": "Camarines Sur",
+      "latitude": 13.3578,
+      "longitude": 123.3678
+    },
+    {
+      "city": "Donsol",
+      "province": "Sorsogon",
+      "latitude": 12.9083,
+      "longitude": 123.5981
+    },
+    {
+      "city": "Tubod",
+      "province": "Lanao del Norte",
+      "latitude": 8.05,
+      "longitude": 123.8
+    },
+    {
+      "city": "Noveleta",
+      "province": "Cavite",
+      "latitude": 14.4292,
+      "longitude": 120.8799
+    },
+    {
+      "city": "Tibigan",
+      "province": "Bohol",
+      "latitude": 9.95,
+      "longitude": 123.9667
+    },
+    {
+      "city": "Sogod",
+      "province": "Southern Leyte",
+      "latitude": 10.3833,
+      "longitude": 124.9833
+    },
+    {
+      "city": "Tuy",
+      "province": "Batangas",
+      "latitude": 14.0167,
+      "longitude": 120.7333
+    },
+    {
+      "city": "Lupao",
+      "province": "Nueva Ecija",
+      "latitude": 15.8794,
+      "longitude": 120.8994
+    },
+    {
+      "city": "Talisay",
+      "province": "Batangas",
+      "latitude": 14.1,
+      "longitude": 121.0167
+    },
+    {
+      "city": "Maria Aurora",
+      "province": "Aurora",
+      "latitude": 15.7967,
+      "longitude": 121.4737
+    },
+    {
+      "city": "Tayug",
+      "province": "Pangasinan",
+      "latitude": 16.0267,
+      "longitude": 120.7478
+    },
+    {
+      "city": "Victoria",
+      "province": "Laguna",
+      "latitude": 14.225,
+      "longitude": 121.325
+    },
+    {
+      "city": "Mamburao",
+      "province": "Occidental Mindoro",
+      "latitude": 13.2233,
+      "longitude": 120.596
+    },
+    {
+      "city": "Pagsanjan",
+      "province": "Laguna",
+      "latitude": 14.2732,
+      "longitude": 121.4552
+    },
+    {
+      "city": "Amadeo",
+      "province": "Cavite",
+      "latitude": 14.1728,
+      "longitude": 120.9277
+    },
+    {
+      "city": "Palauig",
+      "province": "Zambales",
+      "latitude": 15.4336,
+      "longitude": 119.9083
+    },
+    {
+      "city": "Madridejos",
+      "province": "Cebu",
+      "latitude": 11.2667,
+      "longitude": 123.7333
+    },
+    {
+      "city": "Siniloan",
+      "province": "Laguna",
+      "latitude": 14.4167,
+      "longitude": 121.45
+    },
+    {
+      "city": "Matnog",
+      "province": "Sorsogon",
+      "latitude": 12.5856,
+      "longitude": 124.0856
+    },
+    {
+      "city": "Sitangkai",
+      "province": "Tawi-Tawi",
+      "latitude": 4.6615,
+      "longitude": 119.3919
+    },
+    {
+      "city": "Puerto Galera",
+      "province": "Oriental Mindoro",
+      "latitude": 13.5006,
+      "longitude": 120.9548
+    },
+    {
+      "city": "Bacong",
+      "province": "Negros Oriental",
+      "latitude": 9.2464,
+      "longitude": 123.2956
+    },
+    {
+      "city": "La Libertad",
+      "province": "Negros Oriental",
+      "latitude": 10.0266,
+      "longitude": 123.2335
+    },
+    {
+      "city": "Malilipot",
+      "province": "Albay",
+      "latitude": 13.3167,
+      "longitude": 123.7333
+    },
+    {
+      "city": "Maragondon",
+      "province": "Cavite",
+      "latitude": 14.2733,
+      "longitude": 120.7377
+    },
+    {
+      "city": "Valladolid",
+      "province": "Negros Occidental",
+      "latitude": 10.4667,
+      "longitude": 122.8333
+    },
+    {
+      "city": "Balaoan",
+      "province": "La Union",
+      "latitude": 16.8219,
+      "longitude": 120.4045
+    },
+    {
+      "city": "Tago",
+      "province": "Surigao del Sur",
+      "latitude": 9.0192,
+      "longitude": 126.2333
+    },
+    {
+      "city": "Claveria",
+      "province": "Surigao del Norte",
+      "latitude": 9.5742,
+      "longitude": 125.7328
+    },
+    {
+      "city": "Lilio",
+      "province": "Laguna",
+      "latitude": 14.1313,
+      "longitude": 121.4362
+    },
+    {
+      "city": "Cabugao",
+      "province": "Ilocos Sur",
+      "latitude": 17.7947,
+      "longitude": 120.4556
+    },
+    {
+      "city": "Pamplona",
+      "province": "Camarines Sur",
+      "latitude": 13.5925,
+      "longitude": 123.0833
+    },
+    {
+      "city": "Magallanes",
+      "province": "Sorsogon",
+      "latitude": 12.8283,
+      "longitude": 123.8344
+    },
+    {
+      "city": "Santo Domingo",
+      "province": "Albay",
+      "latitude": 13.235,
+      "longitude": 123.7769
+    },
+    {
+      "city": "Las Navas",
+      "province": "Northern Samar",
+      "latitude": 12.34,
+      "longitude": 125.032
+    },
+    {
+      "city": "Pandan",
+      "province": "Antique",
+      "latitude": 11.7206,
+      "longitude": 122.0961
+    },
+    {
+      "city": "Bantay",
+      "province": "Ilocos Sur",
+      "latitude": 17.5839,
+      "longitude": 120.3908
+    },
+    {
+      "city": "San Luis",
+      "province": "Batangas",
+      "latitude": 13.8333,
+      "longitude": 120.9333
+    },
+    {
+      "city": "Medina",
+      "province": "Misamis Oriental",
+      "latitude": 8.9167,
+      "longitude": 125.0167
+    },
+    {
+      "city": "Mendez-Nuñez",
+      "province": "Cavite",
+      "latitude": 14.1286,
+      "longitude": 120.9058
+    },
+    {
+      "city": "Cuenca",
+      "province": "Batangas",
+      "latitude": 13.8988,
+      "longitude": 121.0505
+    },
+    {
+      "city": "Bautista",
+      "province": "Pangasinan",
+      "latitude": 15.8103,
+      "longitude": 120.4756
+    },
+    {
+      "city": "Barugo",
+      "province": "Leyte",
+      "latitude": 11.3167,
+      "longitude": 124.7333
+    },
+    {
+      "city": "Guimbal",
+      "province": "Iloilo",
+      "latitude": 10.6667,
+      "longitude": 122.3167
+    },
+    {
+      "city": "Catmon",
+      "province": "Cebu",
+      "latitude": 10.6667,
+      "longitude": 123.95
+    },
+    {
+      "city": "Initao",
+      "province": "Misamis Oriental",
+      "latitude": 8.5,
+      "longitude": 124.3167
+    },
+    {
+      "city": "Pambujan",
+      "province": "Northern Samar",
+      "latitude": 12.5667,
+      "longitude": 124.9333
+    },
+    {
+      "city": "Santa Maria",
+      "province": "Laguna",
+      "latitude": 14.475,
+      "longitude": 121.425
+    },
+    {
+      "city": "Milaor",
+      "province": "Camarines Sur",
+      "latitude": 13.5961,
+      "longitude": 123.1772
+    },
+    {
+      "city": "Banate",
+      "province": "Iloilo",
+      "latitude": 11.05,
+      "longitude": 122.7833
+    },
+    {
+      "city": "Claveria",
+      "province": "Cagayan",
+      "latitude": 18.6061,
+      "longitude": 121.0822
+    },
+    {
+      "city": "Catubig",
+      "province": "Northern Samar",
+      "latitude": 12.408,
+      "longitude": 125.054
+    },
+    {
+      "city": "President Roxas",
+      "province": "Capiz",
+      "latitude": 11.4297,
+      "longitude": 122.9247
+    },
+    {
+      "city": "Pulupandan",
+      "province": "Negros Occidental",
+      "latitude": 10.5167,
+      "longitude": 122.8
+    },
+    {
+      "city": "Salay",
+      "province": "Misamis Oriental",
+      "latitude": 8.8667,
+      "longitude": 124.8
+    },
+    {
+      "city": "Mataas Na Kahoy",
+      "province": "Batangas",
+      "latitude": 13.9589,
+      "longitude": 121.1138
+    },
+    {
+      "city": "Placer",
+      "province": "Surigao del Norte",
+      "latitude": 9.657,
+      "longitude": 125.6016
+    },
+    {
+      "city": "Bayang",
+      "province": "Lanao del Sur",
+      "latitude": 7.793,
+      "longitude": 124.192
+    },
+    {
+      "city": "Baclayon",
+      "province": "Bohol",
+      "latitude": 9.6227,
+      "longitude": 123.9135
+    },
+    {
+      "city": "Perez",
+      "province": "Quezon",
+      "latitude": 14.1833,
+      "longitude": 121.9333
+    },
+    {
+      "city": "Cavinti",
+      "province": "Laguna",
+      "latitude": 14.24,
+      "longitude": 121.51
+    },
+    {
+      "city": "Pola",
+      "province": "Oriental Mindoro",
+      "latitude": 13.1436,
+      "longitude": 121.44
+    }
+  ]
+}

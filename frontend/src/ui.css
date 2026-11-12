@@ -1,0 +1,32 @@
+/* Keep user-provided names, device models and file names inside their panels. */
+.erepair-platform :is(main, section, article, fieldset, .surface-card, .page-shell) {
+  min-width: 0;
+}
+
+.erepair-platform :is(h1, h2, h3, p, dd, li) {
+  overflow-wrap: anywhere;
+}
+
+.erepair-platform :is(input:not([type='radio']):not([type='checkbox']), select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.erepair-platform .data-scroll {
+  max-width: 100%;
+  overflow: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.erepair-platform .data-scroll:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: .75rem;
+}
+
+@media (max-width: 639px) {
+  html { scroll-padding-top: 9rem; }
+  .erepair-platform :is(input:not([type='radio']):not([type='checkbox']), select, textarea) {
+    font-size: 1rem;
+  }
+}

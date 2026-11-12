@@ -1,0 +1,39 @@
+# Adjust paths, PHP socket, domain and TLS certificates for your host.
+server {
+    listen 443 ssl;
+    server_name erepair.example.com;
+    ssl_certificate /etc/letsencrypt/live/erepair.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/erepair.example.com/privkey.pem;
+    root /srv/erepair/frontend/dist;
+    index index.html;
+    client_max_body_size 30m;
+
+    location ~ /\.(?!well-known) { deny all; }
+
+    # Only the public editorial disk is exposed. Repair uploads use API policies.
+    location /storage/ {
+        alias /srv/erepair/backend/storage/app/public/;
+        add_header X-Content-Type-Options nosniff always;
+        add_header Content-Security-Policy "default-src 'none'; sandbox" always;
+    }
+    location /vendor/ { alias /srv/erepair/backend/public/vendor/; }
+
+    # Reserve backend paths before the SPA navigation fallback.
+    location ~ ^/(api|sanctum|cp|content|img|up)(/|$) {
+        include fastcgi_params;
+        fastcgi_pass unix:/run/php/php8.4-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME /srv/erepair/backend/public/index.php;
+        fastcgi_param SCRIPT_NAME /index.php;
+    }
+    # Retire workers from older installations; this does not enable offline use.
+    location = /sw.js {
+        add_header Cache-Control "no-cache" always;
+        try_files $uri =404;
+    }
+    location / { try_files $uri $uri/ /index.html; }
+}
+server {
+    listen 80;
+    server_name erepair.example.com;
+    return 301 https://$host$request_uri;
+}
