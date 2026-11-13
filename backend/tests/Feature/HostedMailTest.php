@@ -4,7 +4,9 @@ namespace Tests\Feature;
 
 use App\Mail\BrevoHttpTransport;
 use App\Models\User;
+use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mime\Email;
@@ -42,7 +44,12 @@ class HostedMailTest extends TestCase
 
     public function test_provider_failure_does_not_expose_secrets_or_retry_a_send(): void
     {
-        Http::fake(['*' => Http::response(['error' => 'private-test-key'], 429)]);
+        Http::fake(['*' => Http::response(['message' => 'private-test-key and a private reset token', 'code' => 'private-test-key'], 429)]);
+        Log::shouldReceive('warning')->once()->with('Transactional email provider rejected the request.', [
+            'http_status' => 429,
+            'provider_code' => 'unclassified',
+            'category' => 'unclassified',
+        ]);
         $transport = new BrevoHttpTransport('private-test-key');
         try {
             $transport->send((new Email)->from('hello@erepair.test')->to('user@erepair.test')->subject('Reset')->text('private reset token'));
@@ -52,5 +59,22 @@ class HostedMailTest extends TestCase
             $this->assertNull($error->getPrevious());
         }
         Http::assertSentCount(1);
+    }
+
+    public function test_connection_failure_logs_only_its_type_and_keeps_the_exception_private(): void
+    {
+        Http::fake(['*' => Http::failedConnection('private-test-key and a private reset token')]);
+        Log::shouldReceive('warning')->once()->with('Transactional email request failed.', [
+            'failure_class' => ConnectionException::class,
+            'network_errno' => null,
+        ]);
+        $transport = new BrevoHttpTransport('private-test-key');
+        try {
+            $transport->send((new Email)->from('hello@erepair.test')->to('user@erepair.test')->subject('Reset')->text('private reset token'));
+            $this->fail('Connection failure accepted.');
+        } catch (TransportException $error) {
+            $this->assertSame('Transactional email could not be sent.', $error->getMessage());
+            $this->assertNull($error->getPrevious());
+        }
     }
 }

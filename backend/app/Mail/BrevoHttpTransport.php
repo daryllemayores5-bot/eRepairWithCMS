@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\Mailer\Exception\TransportException;
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
@@ -50,11 +51,32 @@ class BrevoHttpTransport extends AbstractTransport
             $response = Http::withHeaders(['api-key' => $this->key])->acceptJson()
                 ->connectTimeout(5)->timeout(15)->withoutRedirecting()
                 ->post('https://api.brevo.com/v3/smtp/email', $payload);
-            if ($response->status() !== 201 || ! is_string($response->json('messageId'))) {
-                throw new TransportException('Transactional email provider did not confirm delivery acceptance.');
-            }
-        } catch (Throwable) {
+        } catch (Throwable $error) {
+            $previous = $error->getPrevious();
+            $context = $previous && method_exists($previous, 'getHandlerContext') ? $previous->getHandlerContext() : [];
+            Log::warning('Transactional email request failed.', [
+                'failure_class' => $error::class,
+                'network_errno' => is_int($context['errno'] ?? null) ? $context['errno'] : null,
+            ]);
             // Do not log provider bodies, recipients, reset URLs or authentication keys.
+            throw new TransportException('Transactional email could not be sent.');
+        }
+        if ($response->status() !== 201 || ! is_string($response->json('messageId'))) {
+            $code = $response->json('code');
+            $knownCodes = ['invalid_parameter', 'missing_parameter', 'unauthorized', 'permission_denied', 'not_enough_credits', 'account_under_validation', 'account_not_enabled', 'bad_request'];
+            $message = (string) $response->json('message', '');
+            $category = match (true) {
+                (bool) preg_match('/\bip\b|whitelist|allowlist/i', $message) => 'ip_authorization',
+                (bool) preg_match('/sender|domain/i', $message) => 'sender',
+                (bool) preg_match('/permission|resource|api.?key/i', $message) => 'authorization',
+                (bool) preg_match('/quota|credit/i', $message) => 'quota',
+                default => 'unclassified',
+            };
+            Log::warning('Transactional email provider rejected the request.', [
+                'http_status' => $response->status(),
+                'provider_code' => in_array($code, $knownCodes, true) ? $code : 'unclassified',
+                'category' => $category,
+            ]);
             throw new TransportException('Transactional email could not be sent.');
         }
     }
