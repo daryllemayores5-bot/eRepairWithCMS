@@ -25,7 +25,8 @@ class HostedMailTest extends TestCase
             $body = html_entity_decode($request['htmlContent']);
 
             return str_contains($body, 'https://erepair.school.edu.ph/reset-password?token=test-reset-token')
-                && str_contains($body, 'customer%40erepair.test');
+                && str_contains($body, 'customer%40erepair.test')
+                && $request['to'][0] === ['email' => 'customer@erepair.test'];
         });
     }
 
@@ -76,5 +77,22 @@ class HostedMailTest extends TestCase
             $this->assertSame('Transactional email could not be sent.', $error->getMessage());
             $this->assertNull($error->getPrevious());
         }
+    }
+
+    public function test_named_addresses_keep_their_name_and_unnamed_addresses_omit_it(): void
+    {
+        Http::preventStrayRequests();
+        Http::fake(['api.brevo.com/*' => Http::response(['messageId' => '<test-message>'], 201)]);
+        $transport = new BrevoHttpTransport('private-test-key');
+        $transport->send((new Email)->from('eRepair <hello@erepair.test>')
+            ->to('user@erepair.test', 'Customer <named@erepair.test>')
+            ->cc('copy@erepair.test')->bcc('hidden@erepair.test')
+            ->replyTo('reply@erepair.test')->subject('Reset')->text('Reset notification'));
+        Http::assertSent(fn ($request) => $request['sender'] === ['email' => 'hello@erepair.test', 'name' => 'eRepair']
+            && $request['to'] === [['email' => 'user@erepair.test'], ['email' => 'named@erepair.test', 'name' => 'Customer']]
+            && $request['cc'] === [['email' => 'copy@erepair.test']]
+            && $request['bcc'] === [['email' => 'hidden@erepair.test']]
+            && $request['replyTo'] === ['email' => 'reply@erepair.test']);
+        Http::assertSentCount(1);
     }
 }

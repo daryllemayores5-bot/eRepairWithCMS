@@ -30,7 +30,14 @@ class BrevoHttpTransport extends AbstractTransport
         if (! $email instanceof Email || $this->key === '' || count($email->getAttachments()) > 0 || count($email->getReplyTo()) > 1) {
             throw new TransportException('Unsupported email or missing transactional mail configuration.');
         }
-        $address = fn (Address $item) => ['email' => $item->getAddress(), 'name' => $item->getName()];
+        $address = static function (Address $item): array {
+            $value = ['email' => $item->getAddress()];
+            if (trim($item->getName()) !== '') {
+                $value['name'] = $item->getName();
+            }
+
+            return $value;
+        };
         $payload = ['sender' => $address($email->getFrom()[0] ?? $message->getEnvelope()->getSender()), 'subject' => $email->getSubject() ?? ''];
         foreach (['to' => $email->getTo(), 'cc' => $email->getCc(), 'bcc' => $email->getBcc()] as $kind => $recipients) {
             if ($recipients !== []) {
