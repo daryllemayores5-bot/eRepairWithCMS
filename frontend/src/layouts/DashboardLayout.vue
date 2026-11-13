@@ -3,7 +3,7 @@ import { computed, nextTick, ref, watch } from 'vue';
 import { RouterLink as Link, RouterView, useRoute } from 'vue-router';
 import { useAuthStore as useAuth } from '@/stores/auth';
 import type { Technician, Repair, Dashboard } from '@/types';
-import { Wrench, ArrowUpRight, CalendarDays, CircleUserRound, Clock3, Search, Star, X, Bell, ChevronDown, History, LayoutDashboard, Settings2 } from 'lucide-vue-next';
+import { Wrench, ArrowUpRight, CalendarDays, CircleUserRound, Clock3, Search, Star, X, Bell, ChevronDown, History, LayoutDashboard, Settings2, FileText, Package, ChartColumn } from 'lucide-vue-next';
 import Button from '@/components/ui/Button.vue';
 import Avatar from '@/components/ui/Avatar.vue';
 import NavLink from '@/components/common/NavLink.vue';
@@ -47,6 +47,18 @@ const links = computed(() => [{
   label: 'My Subscription',
   path: '/dashboard/subscription',
   icon: Star
+}, {
+  label: 'Documents & Templates · Pro',
+  path: '/dashboard/documents',
+  icon: FileText
+}, {
+  label: 'Parts Inventory · Premium',
+  path: '/dashboard/inventory',
+  icon: Package
+}, {
+  label: 'Business Reports · Premium',
+  path: '/dashboard/business-reports',
+  icon: ChartColumn
 }, {
   label: 'Availability',
   path: '/dashboard/availability',

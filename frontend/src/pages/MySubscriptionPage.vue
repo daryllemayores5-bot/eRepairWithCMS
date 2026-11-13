@@ -80,7 +80,7 @@ async function submitSubscription() {
 <template>
 <Empty v-if="auth.user?.role !== 'technician'" title="Technician account required" description="Customers can search and submit inquiries without a subscription." />
 <template v-else>
-<PageHeading eyebrow="Optional technician benefits" title="My Subscription" description="Compare Free, Pro and Premium for the visibility and profile insights you need. Your subscription does not change technician verification." />
+<PageHeading eyebrow="Technician plans and tools" title="My Subscription" description="Free handles your repairs. Pro adds documents and reusable notes. Premium adds inventory and business reports. Verification remains separate." />
 <p class="my-6 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600">DEMO simulation only. Online payments are not connected. Subscription requests do not charge you. Paid plans require administrator approval.</p>
 <Loading v-if="overview.isPending" />
 <Failure v-else-if="overview.isError" :error="overview.error" :retry="() => overview.refetch()" />
@@ -95,6 +95,11 @@ async function submitSubscription() {
   </dl>
   <p v-if="overview.data.pending_payment" role="status" class="mt-5 rounded-lg bg-blue-50 p-4 text-sm">Pending Admin Approval · {{ overview.data.pending_payment.display_reference }} · {{ formatPeso(overview.data.pending_payment.amount) }}. Your current plan stays available while this request is reviewed.</p>
   <p v-if="overview.data.scheduled_subscription" role="status" class="mt-5 rounded-lg bg-violet-50 p-4 text-sm text-violet-900">Scheduled plan: {{ overview.data.scheduled_subscription.plan.name }}. Starts {{ formatBusinessDate(overview.data.scheduled_subscription.starts_at!) }} and expires {{ formatBusinessDate(overview.data.scheduled_subscription.expires_at!) }}. Your current paid plan remains active until then.</p>
+</section>
+<section class="my-6 grid gap-4 lg:grid-cols-3" aria-label="Tools unlocked by your plan">
+  <RouterLink to="/dashboard/documents" class="surface-card block p-5 transition-colors hover:border-blue-400"><p class="text-xs font-semibold uppercase tracking-wide text-primary">Pro + Premium</p><h2 class="mt-2 font-bold text-navy">Documents & Templates</h2><p class="mt-2 text-sm leading-6 text-slate-600">Download PDF quotations and job sheets; save and reuse repair notes.</p><p class="mt-4 text-xs font-semibold text-primary">{{ overview.data.is_pro ? 'Open my tools →' : 'Explore Pro tools →' }}</p></RouterLink>
+  <RouterLink to="/dashboard/inventory" class="surface-card block p-5 transition-colors hover:border-violet-400"><p class="text-xs font-semibold uppercase tracking-wide text-violet-700">Premium</p><h2 class="mt-2 font-bold text-navy">Parts Inventory</h2><p class="mt-2 text-sm leading-6 text-slate-600">Track stock, record parts used on repairs and see low-stock alerts.</p><p class="mt-4 text-xs font-semibold text-violet-700">{{ overview.data.is_premium ? 'Open my inventory →' : 'Explore Premium inventory →' }}</p></RouterLink>
+  <RouterLink to="/dashboard/business-reports" class="surface-card block p-5 transition-colors hover:border-violet-400"><p class="text-xs font-semibold uppercase tracking-wide text-violet-700">Premium</p><h2 class="mt-2 font-bold text-navy">Business Reports</h2><p class="mt-2 text-sm leading-6 text-slate-600">Review repair activity, approved estimates and recorded parts costs. Export CSV or PDF.</p><p class="mt-4 text-xs font-semibold text-violet-700">{{ overview.data.is_premium ? 'Open my reports →' : 'Explore Premium reports →' }}</p></RouterLink>
 </section>
 <div class="my-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
   <section v-for="plan in overview.data.plans" :key="plan.id" :class="['surface-card flex min-w-0 flex-col p-5 sm:p-6', plan.slug === currentSlug ? 'border-blue-400 ring-2 ring-blue-100' : plan.slug === 'premium' ? 'border-violet-200' : '']" :aria-label="`${plan.name} plan`">

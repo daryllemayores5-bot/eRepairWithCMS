@@ -18,6 +18,8 @@ import Loading from '@/components/common/Loading.vue';
 import Failure from '@/components/common/Failure.vue';
 import Status from '@/components/common/Status.vue';
 import PageHeading from '@/components/common/PageHeading.vue';
+import RepairDocumentActions from '@/components/technician/RepairDocumentActions.vue';
+import RepairNoteEditor from '@/components/technician/RepairNoteEditor.vue';
 const route = useRoute(),
   auth = useAuth(),
   cache = useQueryClient();
@@ -270,6 +272,7 @@ const FormData = globalThis.FormData;
 <p class="mt-4 text-xs leading-6 text-muted-foreground">Confirm the appointment and review the estimate to keep your repair moving. Updates appear in the timeline below.</p>
 </template>
 </section>
+<RepairDocumentActions v-if="tech" :repair="r" />
 <section class="surface-card p-6">
 <h2 class="section-title">Progress timeline</h2>
 <ol class="mt-5 space-y-6 border-l-2 border-blue-100 pl-5">
@@ -284,15 +287,7 @@ const FormData = globalThis.FormData;
 </template>
 </ol>
 <template v-if="tech && !['completed', 'canceled', 'rejected'].includes(r.status)">
-<form class="mt-6 space-y-3 border-t pt-5" @submit="(e: Event) => {
-  e.preventDefault();
-  void action(`${base}/notes`, Object.fromEntries(new FormData(e.currentTarget as HTMLFormElement)));
-}">
-<label class="block text-sm">Add repair note<textarea :class="`${fieldClass} mt-2`" name="remarks" required>
-</textarea>
-</label>
-<Button type="submit" :disabled="busy">Add note</Button>
-</form>
+<RepairNoteEditor :busy="busy" @submit="remarks => void action(`${base}/notes`, { remarks })" />
 </template>
 </section>
 </div>

@@ -1,5 +1,40 @@
 # Subscription and simulated revenue system
 
+## Plan-specific workshop tools
+
+Free retains the full existing repair workflow. Pro and Premium add **Documents
+& Templates** at `/dashboard/documents`: technicians can download actual PDF
+quotations and job sheets for their own repairs and create/edit/delete up to 100
+private note templates. Selecting a template on a repair inserts editable text;
+the technician must explicitly post the note. Quotations require an estimate.
+PDFs are generated without a new package, use standard PDF fonts and contain no
+remote assets. They are repair documents, not payment receipts.
+
+Premium additionally adds **Parts Inventory** at `/dashboard/inventory`: opening
+stock, restocking, repair-linked usage, reorder levels, low-stock alerts, inactive
+parts and movement history. Only the owner's in-progress repairs can consume
+parts. Stock writes use transactions and row locks; repeated movement keys do
+not deduct twice, even under concurrent requests. Negative stock is prevented.
+Each usage snapshots its unit cost; restocking changes the current unit cost
+without rewriting previous usage. In-app low-stock alerts include zero stock.
+
+Premium **Business Reports** at `/dashboard/business-reports` supports Philippine
+date filters (up to 366 days), request counts, completed repairs, latest approved
+estimates on completed jobs, recorded parts costs and CSV/PDF downloads. Exports
+include up to 2,000 requests submitted in the selected range. Completion metrics
+use completion dates; parts metrics use movement dates. Estimate totals are not
+received revenue, and parts costs do not include labor or other shop expenses.
+Exports protect spreadsheet cells against formula injection and omit customer
+emails and attachments. Large monetary aggregates retain exact decimal strings.
+
+The API enforces plan, active-account and owner checks on every tool operation.
+Scheduled upgrades do not unlock tools early; access stops at expiration even
+without cron. Saved templates, stock and movement records remain stored when a
+plan expires. The additive workshop migration adds three tables and appends tool
+benefits without changing plan prices, purchased cycles or existing repair data.
+Rollback refuses to discard workshop history. Tool links and locked upgrade
+cards remain visible to Free technicians for plan comparison.
+
 The technician subscription page compares **Free (₱0)**, **Pro (₱199 / 30 days)**
 and **Premium Technician (₱399 / 30 days)**. Prices are database-configured defaults.
 Choose a paid card, review the selected quote, then click **Simulate Payment**.

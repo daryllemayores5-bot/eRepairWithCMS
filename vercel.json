@@ -1,0 +1,205 @@
+{
+    "$schema":  "https://openapi.vercel.sh/vercel.json",
+    "framework":  null,
+    "installCommand":  "npm --prefix frontend ci",
+    "buildCommand":  "npm --prefix frontend test \u0026\u0026 npm --prefix frontend run build:production",
+    "outputDirectory":  "frontend/dist",
+    "headers":  [
+                    {
+                        "source":  "/api/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/sanctum/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/cp/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/vendor/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/storage/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/content/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/img/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/up/:path*",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "private, no-store"
+                                        },
+                                        {
+                                            "key":  "CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        },
+                                        {
+                                            "key":  "Vercel-CDN-Cache-Control",
+                                            "value":  "no-store"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/sw.js",
+                        "headers":  [
+                                        {
+                                            "key":  "Cache-Control",
+                                            "value":  "no-cache"
+                                        }
+                                    ]
+                    },
+                    {
+                        "source":  "/(.*)",
+                        "headers":  [
+                                        {
+                                            "key":  "X-Content-Type-Options",
+                                            "value":  "nosniff"
+                                        },
+                                        {
+                                            "key":  "Referrer-Policy",
+                                            "value":  "strict-origin-when-cross-origin"
+                                        }
+                                    ]
+                    }
+                ],
+    "rewrites":  [
+                     {
+                         "source":  "/api/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/api/:path*"
+                     },
+                     {
+                         "source":  "/sanctum/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/sanctum/:path*"
+                     },
+                     {
+                         "source":  "/cp/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/cp/:path*"
+                     },
+                     {
+                         "source":  "/vendor/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/vendor/:path*"
+                     },
+                     {
+                         "source":  "/storage/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/storage/:path*"
+                     },
+                     {
+                         "source":  "/content/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/content/:path*"
+                     },
+                     {
+                         "source":  "/img/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/img/:path*"
+                     },
+                     {
+                         "source":  "/up/:path*",
+                         "destination":  "https://erepairwithcms-api.onrender.com/up/:path*"
+                     },
+                     {
+                         "source":  "/((?![.])(?!.*/[.])(?!assets/|sw[.]js$|favicon[.]ico$|backend(?:/|$)|deployment(?:/|$)|scripts(?:/|$)|tests(?:/|$)|docs(?:/|$)).*)",
+                         "destination":  "/index.html"
+                     }
+                 ]
+}

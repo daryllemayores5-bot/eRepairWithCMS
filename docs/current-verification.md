@@ -1,5 +1,111 @@
 # Current verification ? November 11, 2026
 
+Pro/Premium workshop implementation, November 13, 2026: implemented locally
+before publishing. Pro adds PDF quotations/job sheets and reusable repair-note
+templates. Premium adds owner-scoped parts inventory, repair-linked deductions,
+restocking, low-stock alerts, movement history and date-filtered CSV/PDF business
+reports. New dashboard pages and repair-page actions make these tools visible;
+Free retains the existing repair workflow and sees upgrade prompts.
+
+Verification: the full backend suite passed 289 tests / 1,896 assertions and
+the full frontend suite passed 215 tests. A subsequent exact-decimal edge case
+and final fixes passed the 16-test workshop/PDF/concurrency set (449 assertions)
+and seven focused Vue tests. The PDF is parsed by an external PDF reader.
+Concurrent stock requests cannot overdraw or duplicate deductions. Owner, role,
+expiry, scheduled-upgrade, input validation and spreadsheet-injection checks pass.
+Type checking and the updated production bundle pass. These JavaScript checks
+used installed Node 24.14.0; the release doctor still rejects that runtime, so
+they are diagnostics, not supported-runtime release clearance. Remote deployment
+must build and verify on the project's configured Node 26 runtime.
+
+Before the local migration, recovery matched 38 tables and 66 files. The additive
+migration now creates three workshop tables; local integrity/FK-index checks pass
+and the schema dictionary was regenerated. Existing accounts, repair records,
+plan prices and purchased subscriptions were not reset. The new tools are not
+live until their deployment commit is pushed and both hosts are updated. The
+existing hosted mail authorization failure remains separate and unresolved.
+
+Owner-requested hosted samples, November 13, 2026: added three fictional
+technicians, four customers and twelve SAMPLE-labeled repair requests to the live
+database. The records include all ten repair statuses, 49 status-history rows,
+twelve appointments, five estimates, two explicitly fictional reviews and 24
+in-app notifications. The public API returns all three sample profiles. No mail
+was sent and no real login history was fabricated. Unique random login passwords
+are saved privately in `.local/hosted-sample-accounts.json`; all seven password
+hashes verify. Reserved sample email addresses cannot receive email resets.
+
+The additive transaction was rehearsed twice on the existing recovery branch;
+its second run created no duplicates. Existing live account fingerprints match
+exactly. One non-sample request appeared concurrently (none existed at the initial
+snapshot); the sample transaction inserts only its own fixed references. The
+single CMS administrator was retained. This uses a separate labeled sample set,
+not the destructive/fresh-install local DemoSeeder. Evidence is in
+`.local/hosted-sample-data-verification.json`; the recovery branch now also holds
+the sample rehearsal. Live mail failure remains unresolved as documented in
+`mail-verification.md`.
+
+Hosted HTTP/session acceptance, November 13, 2026: the user ran
+`node .local/verify-hosted-session.mjs --cms-session` from a network-enabled
+terminal. All ten stages pass, including the full anonymous HTTPS verifier,
+secure host-only XSRF/session cookies and credentialed CORS, private JSON denials,
+native CMS assets, authenticated operations/subscription/revenue pages, separate
+CMS/marketplace guards and logout. The saved report has status `passed` at
+`2026-11-12T23:48:53.086Z`; no email was requested. This supersedes the earlier
+tool-only cookie/denial limitations and failed network attempt below. Actual
+browser repair workflows, authorized external reset-mail receipt and independent
+database/application-key recovery remain outstanding.
+
+Hosted recovery follow-up, November 13, 2026: a separate Neon branch,
+`deployment-recovery-check-20261113` (`br-misty-cake-aom36yt6`), matches the
+production branch across 34 non-transient tables. Cache, cache locks, sessions
+and queued jobs were excluded from the comparison. All 25 durable files
+(10,077 bytes) pass stored size/SHA-256 checks on both branches. Their payloads
+were also exported and restored into a new local directory, with every restored
+checksum matching. Evidence is retained in
+`.local/backups/hosted-recovery-20261113/`. This verifies a provider-side copy
+and filesystem restoration, not independent database-backup or key recovery.
+The recovery branch remains retained; production connections were unchanged.
+
+`.local/verify-hosted-session.mjs` now wraps the existing full anonymous HTTPS
+verifier and optionally checks native CMS login, private operations pages,
+independent authentication guards and logout using the privately saved hosted
+credentials. Syntax validation passes. Actual execution in the agent session
+fails at HTTPS connectivity (`EACCES`) before authentication; it must be run
+from a terminal with network access. No email was sent. Full browser repair
+workflows, authorized reset-mail/inbox checks and independent database/key
+recovery remain outstanding.
+
+Hosted deployment, November 13, 2026 (Asia/Shanghai):
+`https://erepairwithcms.vercel.app` now serves the frontend and proxies the live
+Render backend. Render deploy `dep-dbr4i8oae00c73eiefa0` is live at source commit
+`422ef9f89b16df93e5281c48371f44861da567e8`. Configuration and full database
+production preflight pass. Neon has 14 applied migrations, 38 tables, one
+administrator and one independent CMS editor. The fresh hosted database contains
+no local demonstration technicians.
+
+The public health endpoint returns HTTP 200 with application `ok` and database
+`connected`. Technician discovery, the SPA deep link and native CMS sign-in
+respond successfully; sampled native JS/CSS and custom CMS CSS return HTTP 200
+with correct MIME types. Sanctum returns HTTP 204 with a secure HttpOnly SameSite
+cookie observed. The connected fetch helper does not expose every Set-Cookie
+header and classified a private-route 401 as share-link authentication failure;
+the complete cookie/denial checks are therefore not certified by this smoke test.
+
+Build commands now use transient cache/session/queue drivers before database
+initialization. Hosted migrations use Neon's direct endpoint with verified TLS;
+DB_URL overrides DB_HOST and was corrected accordingly. Explicit optional libpq
+client-certificate paths prevent the queue service account from probing /root.
+The one-time bootstrap password has been cleared from Render. PHP-FPM, Nginx,
+scheduler and queue entered RUNNING; two scheduled CMS jobs completed after the
+last deploy, with no repeated certificate failure on the new instance.
+
+Authenticated browser workflows, external password-reset delivery and a hosted
+backup/recovery exercise remain acceptance work. Local network restrictions still
+prevent the standalone HTTPS verifier from reaching the host, so connected tools
+were used for the checks above. Private deployment evidence is in
+`.local/eRepairWithCMS-deployment.json`. Earlier unconnected-hosting statements
+below are historical.
+
 Hosted staging bootstrap (November 12, 2026): the connected Vercel account was
 queried again. `erepair-verification` is configured for Node 26.x, is not live,
 has no latest deployment or domains, and retains provider-domain SSO protection.

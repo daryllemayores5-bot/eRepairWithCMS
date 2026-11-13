@@ -10,7 +10,8 @@ class DatabaseIntegrity
     {
         $required = ['payment_subscription_owner_fk', 'review_repair_owners_fk', 'users_account_status_valid',
             'appointments_status_valid', 'repair_estimates_state_valid', 'technician_experience_valid',
-            'subscription_valid', 'demo_payment_valid', 'subscription_plan_valid', 'users_business_role', 'reviews_rating_range'];
+            'subscription_valid', 'demo_payment_valid', 'subscription_plan_valid', 'users_business_role', 'reviews_rating_range',
+            'inventory_parts_nonnegative', 'inventory_movements_valid', 'inventory_movement_part_owner_fk'];
         $validated = $connection->select("SELECT c.conname FROM pg_constraint c JOIN pg_namespace n ON n.oid = c.connamespace WHERE n.nspname = 'public' AND c.convalidated");
         $missing = array_diff($required, array_column($validated, 'conname'));
         $unindexed = $connection->select(<<<'SQL'

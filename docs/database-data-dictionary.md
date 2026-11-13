@@ -2,8 +2,8 @@
 
 Schema metadata only; no application records, credentials or password hashes are exported.
 
-Generated from the applied PostgreSQL public schema on 2026-11-12 01:39:00 UTC.
-38 tables. Regenerate with `php artisan erepair:database-schema --write`.
+Generated from the applied PostgreSQL public schema on 2026-11-13 04:08:44 UTC.
+41 tables. Regenerate with `php artisan erepair:database-schema --write`.
 Use migrations for installation; this document is not a database restore script.
 
 ## activity_logs
@@ -289,6 +289,71 @@ Use migrations for installation; this document is not a database restore script.
 - `hosted_files_pkey`: `CREATE UNIQUE INDEX hosted_files_pkey ON public.hosted_files USING btree (id)`
 - `hosted_files_root_path_hash_unique`: `CREATE UNIQUE INDEX hosted_files_root_path_hash_unique ON public.hosted_files USING btree (root, path_hash)`
 
+## inventory_movements
+
+| Column | PostgreSQL type | Nullable |
+| --- | --- | --- |
+| `id` | `bigint` | No |
+| `technician_id` | `bigint` | No |
+| `inventory_part_id` | `bigint` | No |
+| `repair_request_id` | `bigint` | Yes |
+| `actor_id` | `bigint` | No |
+| `kind` | `character varying(16)` | No |
+| `quantity` | `integer` | No |
+| `unit_cost` | `numeric(12,2)` | No |
+| `note` | `character varying(500)` | Yes |
+| `idempotency_key` | `uuid` | No |
+| `created_at` | `timestamp(0) with time zone` | Yes |
+| `updated_at` | `timestamp(0) with time zone` | Yes |
+
+### Constraints
+
+- `inventory_movement_part_owner_fk`: `FOREIGN KEY (inventory_part_id, technician_id) REFERENCES inventory_parts(id, technician_id) ON DELETE RESTRICT`
+- `inventory_movements_actor_id_foreign`: `FOREIGN KEY (actor_id) REFERENCES users(id) ON DELETE RESTRICT`
+- `inventory_movements_pkey`: `PRIMARY KEY (id)`
+- `inventory_movements_repair_request_id_foreign`: `FOREIGN KEY (repair_request_id) REFERENCES repair_requests(id) ON DELETE RESTRICT`
+- `inventory_movements_technician_id_foreign`: `FOREIGN KEY (technician_id) REFERENCES technician_profiles(id) ON DELETE RESTRICT`
+- `inventory_movements_technician_id_idempotency_key_unique`: `UNIQUE (technician_id, idempotency_key)`
+- `inventory_movements_valid`: `CHECK (((quantity > 0) AND (unit_cost >= (0)::numeric) AND ((((kind)::text = 'usage'::text) AND (repair_request_id IS NOT NULL)) OR (((kind)::text = ANY ((ARRAY['opening'::character varying, 'restock'::character varying])::text[])) AND (repair_request_id IS NULL)))))`
+
+### Indexes
+
+- `inventory_movements_actor_id_index`: `CREATE INDEX inventory_movements_actor_id_index ON public.inventory_movements USING btree (actor_id)`
+- `inventory_movements_inventory_part_id_index`: `CREATE INDEX inventory_movements_inventory_part_id_index ON public.inventory_movements USING btree (inventory_part_id)`
+- `inventory_movements_pkey`: `CREATE UNIQUE INDEX inventory_movements_pkey ON public.inventory_movements USING btree (id)`
+- `inventory_movements_repair_request_id_index`: `CREATE INDEX inventory_movements_repair_request_id_index ON public.inventory_movements USING btree (repair_request_id)`
+- `inventory_movements_technician_id_created_at_index`: `CREATE INDEX inventory_movements_technician_id_created_at_index ON public.inventory_movements USING btree (technician_id, created_at)`
+- `inventory_movements_technician_id_idempotency_key_unique`: `CREATE UNIQUE INDEX inventory_movements_technician_id_idempotency_key_unique ON public.inventory_movements USING btree (technician_id, idempotency_key)`
+
+## inventory_parts
+
+| Column | PostgreSQL type | Nullable |
+| --- | --- | --- |
+| `id` | `bigint` | No |
+| `technician_id` | `bigint` | No |
+| `sku` | `character varying(64)` | No |
+| `name` | `character varying(120)` | No |
+| `quantity` | `integer` | No |
+| `reorder_level` | `integer` | No |
+| `unit_cost` | `numeric(12,2)` | No |
+| `active` | `boolean` | No |
+| `created_at` | `timestamp(0) with time zone` | Yes |
+| `updated_at` | `timestamp(0) with time zone` | Yes |
+
+### Constraints
+
+- `inventory_part_owner_key`: `UNIQUE (id, technician_id)`
+- `inventory_parts_nonnegative`: `CHECK (((quantity >= 0) AND (reorder_level >= 0) AND (unit_cost >= (0)::numeric)))`
+- `inventory_parts_pkey`: `PRIMARY KEY (id)`
+- `inventory_parts_technician_id_foreign`: `FOREIGN KEY (technician_id) REFERENCES technician_profiles(id) ON DELETE RESTRICT`
+- `inventory_parts_technician_id_sku_unique`: `UNIQUE (technician_id, sku)`
+
+### Indexes
+
+- `inventory_part_owner_key`: `CREATE UNIQUE INDEX inventory_part_owner_key ON public.inventory_parts USING btree (id, technician_id)`
+- `inventory_parts_pkey`: `CREATE UNIQUE INDEX inventory_parts_pkey ON public.inventory_parts USING btree (id)`
+- `inventory_parts_technician_id_sku_unique`: `CREATE UNIQUE INDEX inventory_parts_technician_id_sku_unique ON public.inventory_parts USING btree (technician_id, sku)`
+
 ## job_batches
 
 | Column | PostgreSQL type | Nullable |
@@ -348,6 +413,28 @@ Use migrations for installation; this document is not a database restore script.
 ### Indexes
 
 - `migrations_pkey`: `CREATE UNIQUE INDEX migrations_pkey ON public.migrations USING btree (id)`
+
+## note_templates
+
+| Column | PostgreSQL type | Nullable |
+| --- | --- | --- |
+| `id` | `bigint` | No |
+| `technician_id` | `bigint` | No |
+| `title` | `character varying(100)` | No |
+| `body` | `text` | No |
+| `created_at` | `timestamp(0) with time zone` | Yes |
+| `updated_at` | `timestamp(0) with time zone` | Yes |
+
+### Constraints
+
+- `note_templates_pkey`: `PRIMARY KEY (id)`
+- `note_templates_technician_id_foreign`: `FOREIGN KEY (technician_id) REFERENCES technician_profiles(id) ON DELETE RESTRICT`
+- `note_templates_technician_id_title_unique`: `UNIQUE (technician_id, title)`
+
+### Indexes
+
+- `note_templates_pkey`: `CREATE UNIQUE INDEX note_templates_pkey ON public.note_templates USING btree (id)`
+- `note_templates_technician_id_title_unique`: `CREATE UNIQUE INDEX note_templates_technician_id_title_unique ON public.note_templates USING btree (technician_id, title)`
 
 ## notifications
 

@@ -73,6 +73,15 @@ export function createAppRouter(history: RouterHistory = createWebHistory()) {
             path: 'subscription',
             component: () => import('@/pages/MySubscriptionPage.vue')
           }, {
+            path: 'documents',
+            component: () => import('@/pages/DocumentsTemplatesPage.vue')
+          }, {
+            path: 'inventory',
+            component: () => import('@/pages/PartsInventoryPage.vue')
+          }, {
+            path: 'business-reports',
+            component: () => import('@/pages/BusinessReportsPage.vue')
+          }, {
             path: 'repairs',
             component: () => import('@/pages/RepairListPage.vue')
           }, {
